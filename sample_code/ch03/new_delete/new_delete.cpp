@@ -3,12 +3,12 @@
 using namespace std;
 
 int main() {
-  int* pt_int_value = new int;    // 동적 메모리 할당
+	int* pt_int_value = new int;    // heap 영역에 int형 변수 1개를 위한 메모리 할당
 
-  *pt_int_value = 100;
-  cout << *pt_int_value << endl;
+	*pt_int_value = 100; // 할당된 메모리에 100 저장
+	cout << *pt_int_value << endl; // 할당된 메모리에 저장된 값 출력
 
-  delete pt_int_value;    // 동적 메모리 해제
+	delete pt_int_value;    // 할당된 메모리 해제
 
   return 0;
 }

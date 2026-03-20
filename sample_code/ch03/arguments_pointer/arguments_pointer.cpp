@@ -2,6 +2,8 @@
 
 using namespace std;
 
+//주소에 의한 호출 : 함수가 매개변수로 전달된 주소를 이용하여, 매개변수로 전달된 주소에 저장된 값을 변경하는 방법
+
 // 포인터 변수를 매개변수로 사용
 void change_negative(int* _val) {
   if (*_val > 0)

@@ -127,9 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="_에_의한_호출.txt" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Memo.txt" />
+    <Text Include="데이터형태 구별.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

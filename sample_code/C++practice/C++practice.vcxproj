@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="_에_의한_호출.txt" />
+    <ClCompile Include="일반변수선언.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Memo.txt" />

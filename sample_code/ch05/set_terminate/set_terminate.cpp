@@ -12,7 +12,7 @@ void myterminate() {
 int main(void) {
   set_terminate(myterminate);    // 종료 처리 함수를 myterminate로 지정
 
-  throw 1;    // 처리되지 않는 예외를 던짐
+  throw 1;    // 처리되지 않는 예외를 던짐, 이 예외는 myterminate 함수에서 처리됨
 
   return 0;   // 이 줄은 실행되지 않음, 위에서 예외가 던져졌기 때문
 }

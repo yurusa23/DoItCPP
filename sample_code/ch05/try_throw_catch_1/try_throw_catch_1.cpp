@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-  try {
+  try { //try구문에 catch 3개 
     int input;
     cout << "정수 중 하나를 입력하세요 : ";
     cin >> input;
@@ -29,7 +29,7 @@ int main() {
       cout << "after throw Z" << endl;
     }
   }
-  catch (int a) {   // 정수 형식 예외 받기
+  catch (int a) {   // 정수 형식 예외 받기. ex) 1일경우 
     cout << "catch " << a << endl;
   }
   catch (float b) {   // 부동소수점 형식 예외 받기

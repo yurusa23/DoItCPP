@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int main() {
+int main() { // try 구문과 catch 구문을 이용한 예외 처리 예제
   try { //try구문에 catch 3개 
     int input;
     cout << "정수 중 하나를 입력하세요 : ";

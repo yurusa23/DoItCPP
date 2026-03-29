@@ -16,21 +16,21 @@ int main() { // try 구문과 catch 구문을 이용한 예외 처리 예제
     // 입력받은 숫자가 양수이면
 	if (input > 0) { // 양수 입력 시 예외 발생
       cout << "throw 1" << endl;
-      throw 1;      // 예외 1 발생(정수 형식 예외) 
-      cout << "after throw 1" << endl; 
+	  throw 1;      // throw가 발생한 순간 예외가 발생하여 프로그램이 중단되고, catch 구문으로 이동하여 예외를 처리하게 됨
+      cout << "after throw 1" << endl; //throw 다음줄에 있는 해당 코드는 실행되지 않음.
     }
 
     // 입력받은 숫자가 음수이면
-    if (input < 0) {
+    if (input < 0) { // 음수 입력 시 예외 발생
       cout << "throw -1.0f" << endl;
-      throw - 1.0f;   // 예외 1.0f 발생(부동소수점 형식 예외)
+	  throw - 1.0f;   // 예외 1.0f 발생(실수형 타입을 던짐), catch 구문에서 float b로 받아서 처리
       cout << "after throw -1.0f" << endl;
     }
 
     // 입력받은 숫자가 0이면
-    if (input == 0) {
+    if (input == 0) { // 0 입력 시 예외 발생
       cout << "throw Z" << endl;
-      throw 'Z';    // 예외 Z 발생(문자 형식 예외)
+      throw 'Z';    // 예외 Z 발생(문자 형식 예외) // catch 구문에서 char c로 받아서 처리
       cout << "after throw Z" << endl;
     }
   }

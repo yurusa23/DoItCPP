@@ -1,6 +1,7 @@
 ﻿#include <iostream>
-
 using namespace std;
+
+//어떤 데이터 형식의 예외를 throw로 던질지 모르는 경우, catch 구문에서 ...을 이용하여 모든 예외를 받을 수 있음.
 
 int main() {
   try {
@@ -29,7 +30,7 @@ int main() {
   catch (int a) {   // 정수 형식 예외 받기
     cout << "catch " << a << endl;
   }
-  catch (...) {   // 처리되지 않은 나머지 예외 모두 받기
+  catch (...) {   // 명시하지 않은 나머지 모든 예외를 받아서 처리 가능 (음수를 입력했거나 0을 입력했을때)
     cout << "catch all" << endl;
   }
 

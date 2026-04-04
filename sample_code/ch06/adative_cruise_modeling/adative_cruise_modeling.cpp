@@ -13,9 +13,9 @@ class accelerator;
 
 const int dummy = 0;
 
-class engine {
-private:
-  virtual void acceleration_output() = 0;
+class engine { // engine 클래스는 가속과 감속에 대한 인터페이스를 제공하는 추상 클래스
+private: //접근지정자 private로 선언하여 외부에서 직접 접근할 수 없도록 함
+  virtual void acceleration_output() = 0; //가속 
   virtual void reduce_output() = 0;
   friend class accelerator;
 };
@@ -26,7 +26,7 @@ private:
   virtual void reduce_output() = 0;
 };
 
-class gs_engine : public ic_engine {
+class gs_engine : public ic_engine { // gs_engine은 ic_engine 의 자식 클래스
 private:
   void acceleration_output() override { increasing_fuel(); };
   void reduce_output() override { decreasing_fuel(); };

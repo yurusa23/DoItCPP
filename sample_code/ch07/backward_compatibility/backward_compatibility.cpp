@@ -4,7 +4,7 @@
 
 using namespace std;
 
-class file_reader_original {
+class file_reader_original { //부모클래스
 public:
   static int read_header();
   static file_reader_original* get_reader_instance();

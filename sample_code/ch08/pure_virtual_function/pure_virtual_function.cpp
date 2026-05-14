@@ -25,7 +25,7 @@ public:
   monster() {};
   void attack(player target_player) {};
   virtual void attack_special(player target_player);
-  virtual void attack_at_dawn() = 0;
+  virtual void attack_at_dawn() = 0; // 순수 가상 함수 선언
 };
 
 void monster::attack_special(player target_player) {

@@ -22,7 +22,7 @@ public:
   monster() {};
   void get_damage(int _damage) {};
   void attack(player target_player) {};
-  void attack_special(player target_player);
+  void attack_special(player target_player); //virtual 키워드 제거, 가상 함수가 아님
 };
 
 void monster::attack_special(player target_player) {
@@ -71,7 +71,7 @@ int main() {
   monster_a& mon_a = forest_monster;
 
   cout << endl << "부모 클래스로 업캐스팅 후 공격" << endl;
-  mon.attack_special(player_1);  // monster_a의 오버라이딩 함수 호출
+  mon.attack_special(player_1);  // virtual 키워드가 없으므로, 부모 클래스의 attack_special이 호출됨
 
   cout << endl << "자식 클래스로 공격" << endl;
   mon_a.attack_special(player_1);

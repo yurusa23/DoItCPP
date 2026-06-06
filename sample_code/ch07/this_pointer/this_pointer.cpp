@@ -23,7 +23,7 @@ void bank::use_counter(int _in, int _out) {
 }
 
 void bank::transfer_account(int safe) {
-  this->safe = safe;
+  this->safe = safe; //<< 핵심 this->safe는 이 객체 고유의 멤버 변수(내 금고)이고, 오른쪽의 safe는 방금 괄호를 타고 들어온 매개변수
   cout << bank_name << "으로 계좌 이동: " << safe << endl;
 }
 

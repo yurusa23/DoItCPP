@@ -22,7 +22,7 @@ public:
 class monster {
 public:
   monster() {};
-  virtual void attack_special(player target_player);
+  virtual void attack_special(player target_player); // << virtual void 덕분에 forest monster 공격이 10뎀이 아닌 15뎀으로 나옴(동적바인딩의 역할)
 };
 
 void monster::attack_special(player target_player) {
@@ -43,14 +43,14 @@ void monster_a::attack_special(player target_player) {
 int main() {
   player player_1;
 
-  monster mother_monster;
-  monster_a forest_monster;
+  monster mother_monster; // 정적바인딩
+  monster_a forest_monster; //객체의 독립적 생성 및 직접 호출
 
   mother_monster.attack_special(player_1);
 
-  monster* mon = &forest_monster;
+  monster* mon = &forest_monster; // 동적바인딩을 위해 부모 클래스 포인터로 업캐스팅
   cout << endl << "부모 클래스로 업케스팅 후 공격" << endl;
-  mon->attack_special(player_1);
+  mon->attack_special(player_1); // 부모 클래스 포인터로 호출 시, 자식 클래스의 오버라이딩된 함수가 호출됨(동적 바인딩)
 
   mon = &mother_monster;
   cout << endl << "부모 클래스로 공격" << endl;

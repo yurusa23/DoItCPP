@@ -62,7 +62,7 @@ void monster_c::attack_special(player target_player) {
   cout << "강력 뇌전 공격 : 데미지 - 100 hp" << endl;
 }
 
-int main() {
+int main() { // 가장먼저 봐야할 곳
   player player_1;
 
   monster_a forest_monster;

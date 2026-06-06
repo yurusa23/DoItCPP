@@ -78,7 +78,7 @@ private:
 int monster_b::total_count = 0; // 정적 변수 초기화
 
 monster_b::monster_b(const monster_b& ref) : unique_id(++total_count), target(ref.target) {
-  quiz = new char[1024];
+  quiz = new char[1024]; // <<<< 여기가 핵심 새로운 힙 메모리 영역을 할당해줌
   strcpy_s(quiz, strlen(ref.quiz) + 1, ref.quiz);
   monster_type = ref.monster_type;
   difficult_level = ref.difficult_level;

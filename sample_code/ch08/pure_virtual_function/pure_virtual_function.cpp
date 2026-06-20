@@ -83,8 +83,8 @@ void monster_c::attack_at_dawn() {
 int main() {
   list<monster*> mon_list;
 
-  monster_a first_monster;
-  mon_list.push_back(&first_monster);
+  monster_a first_monster; //monster a클래스를 상속받은 first_monster 객체 생성
+  mon_list.push_back(&first_monster); //monster 클래스 포인터 리스트에 first_monster 객체의 주소 추가
 
   monster_b second_monster;
   mon_list.push_back(&second_monster);

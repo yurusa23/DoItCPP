@@ -48,7 +48,7 @@ public:
   static void dot_product(my_vector& operand1, my_vector& operand2);
 
 private:
-  // 정적 멤버 변수 선언
+  // 정적 멤버 함수 선언
   static void matrix_vector_multiply(matrix& operand1, my_vector& operand2);
 };
 
@@ -79,7 +79,7 @@ void do_vector_innerproduct(my_vector& vector_1, my_vector& vector_2) {
 }
 
 int main() {
-  matrix matrix_1(10, 10), matrix_2(10, 10);
+  matrix matrix_1(10, 10), matrix_2(10, 10); 
   my_vector vector_1(10), vector_2(10);
 
   do_matrix_multiply(matrix_1, matrix_2);
